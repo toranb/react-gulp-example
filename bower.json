@@ -1,0 +1,7 @@
+{
+  "name": "my-bower-configuration",
+  "version": "0.0.1",
+  "dependencies": {
+    "react": "0.10.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "gulp": "*",
+    "gulp-react": "*",
+    "gulp-concat": "*",
+    "jshint": "*"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  }
+}

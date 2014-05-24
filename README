@@ -1,0 +1,12 @@
+A simple react app using gulp for the client side build step
+
+
+To run the react app locally
+
+    npm install
+    export PATH="./node_modules/.bin:$PATH"
+
+    gulp
+    python -m SimpleHTTPServer 3000
+
+    visit http://localhost:3000 to see the running app
