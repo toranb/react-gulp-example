@@ -2,8 +2,12 @@
   "dependencies": {
     "gulp": "*",
     "gulp-react": "*",
+    "gulp-karma": "*",
     "gulp-concat": "*",
-    "jshint": "*"
+    "jshint": "*",
+    "phantomjs": "*",
+    "karma": "~0.10",
+    "karma-mocha": "~0.1"
   },
   "scripts": {
     "postinstall": "bower install"
