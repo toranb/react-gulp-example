@@ -4,4 +4,4 @@ var Hello = React.createClass({
     }
 });
  
-React.renderComponent(<Hello name="World" />, document.body);
+export default Hello;

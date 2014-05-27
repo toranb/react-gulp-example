@@ -4,10 +4,13 @@
     "gulp-react": "*",
     "gulp-karma": "*",
     "gulp-concat": "*",
+    "gulp-filter": "*",
+    "gulp-es6-module-transpiler": "*",
     "jshint": "*",
     "phantomjs": "*",
     "karma": "~0.10",
-    "karma-mocha": "~0.1"
+    "karma-mocha": "*",
+    "karma-chai": "*"
   },
   "scripts": {
     "postinstall": "bower install"

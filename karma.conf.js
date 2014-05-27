@@ -1,6 +1,6 @@
 module.exports = function(karma) {
     karma.set({
-        frameworks: ['mocha'],
+        frameworks: ['mocha', 'chai'],
         files: [
           "dist/deps.min.js"
         ],
@@ -10,7 +10,7 @@ module.exports = function(karma) {
         reporters: ['progress'],
         logLevel: karma.LOG_ERROR,
         browsers: ['Chrome'],
-        singleRun: true,
-        autoWatch: false,
+        singleRun: false,
+        autoWatch: true,
     });
 };
