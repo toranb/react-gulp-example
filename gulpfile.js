@@ -7,7 +7,7 @@ var transpiler = require('gulp-es6-module-transpiler');
 
 var paths = {
     deps: [
-        "bower_components/loader.js",
+        "bower_components/ember-loader/loader.js",
         "bower_components/react/react.js",
         "src/**/*.jsx"
     ],
