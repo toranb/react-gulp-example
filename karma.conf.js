@@ -2,7 +2,7 @@ module.exports = function(karma) {
     karma.set({
         frameworks: ['mocha', 'chai'],
         files: [
-          "dist/deps.min.js"
+          "dist/karma.min.js"
         ],
         port: 9876,
         runnerPort: 9100,

@@ -9,15 +9,12 @@ var paths = {
     deps: [
         "bower_components/ember-loader/loader.js",
         "bower_components/react/react.js",
+        "bower_components/react/react-with-addons.js",
         "src/**/*.jsx"
     ],
-    test: [
-        "bower_components/loader.js",
-        "bower_components/jquery/jquery.min.js",
-        "bower_components/react/react.js",
-        "src/**/*.jsx",
-        "test/**/*.spec.js",
-        "bower_components/test-loader.js",
+    karma: [
+        "dist/deps.min.js",
+        "test/**/*.spec.js"
     ]
 };
 
@@ -37,15 +34,9 @@ gulp.task('default', function(){
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('test', function () {
-    return gulp.src(paths.test)
-        .pipe(filter)
-        .pipe(react())
-        .pipe(transpiler({
-            type: "amd",
-        }))
-        .pipe(filter.restore())
-        .pipe(concat('deps.min.js'))
+gulp.task('test', ['default'], function () {
+    return gulp.src(paths.karma)
+        .pipe(concat('karma.min.js'))
         .pipe(gulp.dest('dist'))
         .pipe(karma({
             configFile: 'karma.conf.js',

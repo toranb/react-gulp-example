@@ -3,8 +3,6 @@
   "version": "0.0.1",
   "dependencies": {
     "react": "0.10.0",
-    "ember-loader": "*",
-    "jquery": "1.9.1",
-    "jquery-mockjax": "*"
+    "ember-loader": "*"
   }
 }

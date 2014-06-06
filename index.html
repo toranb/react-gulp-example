@@ -5,15 +5,13 @@
   </head>
   <body>
 
-    <div id="app"></div>
-
     <script src="dist/deps.min.js"></script>
 
     <script src="bower_components/react/JSXTransformer.js"></script>
     <script type="text/jsx">
       /** @jsx React.DOM */
       var Hello = require('app')['default'];
-      React.renderComponent(<Hello name="World" />, document.getElementById('app'));
+      React.renderComponent(Hello({buttonText: 'speak'}, 'hello world!'), document.body);
     </script>
 
   </body>
