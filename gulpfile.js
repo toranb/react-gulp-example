@@ -9,16 +9,24 @@ var paths = {
     deps: [
         "bower_components/ember-loader/loader.js",
         "bower_components/react/react.js",
-        "bower_components/react/react-with-addons.js",
         "src/**/*.jsx"
+    ],
+    tests: [
+        "bower_components/react/react-with-addons.js",
+        "test/**/*.spec.js"
     ],
     karma: [
         "dist/deps.min.js",
-        "test/**/*.spec.js"
+        "dist/tests.min.js",
+        "test-loader.js"
     ]
 };
 
 var filter = gulpFilter(function(file) {
+  return file.path.indexOf('bower_components') === -1;
+});
+
+var testfilter = gulpFilter(function(file) {
   return file.path.indexOf('bower_components') === -1;
 });
 
@@ -34,7 +42,18 @@ gulp.task('default', function(){
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('test', ['default'], function () {
+gulp.task('test-suite', function(){
+    return gulp.src(paths.tests)
+        .pipe(testfilter)
+        .pipe(transpiler({
+            type: "amd",
+        }))
+        .pipe(testfilter.restore())
+        .pipe(concat('tests.min.js'))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('test', ['default', 'test-suite'], function () {
     return gulp.src(paths.karma)
         .pipe(concat('karma.min.js'))
         .pipe(gulp.dest('dist'))

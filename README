@@ -15,11 +15,3 @@ To run the react tests
 
     npm install
     gulp test
-
-
-//todo
-
-** include the react addons in the test build only
-** transpile the test folder as part of the gulp test task
-** cleanup the test to import addons and hello (via ES6)
-** write a test loader to require any module w/ the test prefix
