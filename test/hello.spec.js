@@ -1,4 +1,4 @@
-import Hello from 'app';
+import Hello from 'example/app';
 
 describe("hello", function() {
     var hello, el;

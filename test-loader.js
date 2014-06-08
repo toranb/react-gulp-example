@@ -1,1 +1,1 @@
-require('hello.spec');
+require('example/tests/hello.spec');

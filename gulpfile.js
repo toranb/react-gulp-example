@@ -36,6 +36,7 @@ gulp.task('default', function(){
         .pipe(react())
         .pipe(transpiler({
             type: "amd",
+            prefix: "example"
         }))
         .pipe(filter.restore())
         .pipe(concat('deps.min.js'))
@@ -47,6 +48,7 @@ gulp.task('test-suite', function(){
         .pipe(testfilter)
         .pipe(transpiler({
             type: "amd",
+            prefix: "example/tests"
         }))
         .pipe(testfilter.restore())
         .pipe(concat('tests.min.js'))
