@@ -9,7 +9,7 @@
     "gulp-es6-module-transpiler": "*",
     "jshint": "*",
     "phantomjs": "*",
-    "karma": "~0.10",
+    "karma": "*",
     "karma-mocha": "*",
     "karma-chai": "*"
   },
